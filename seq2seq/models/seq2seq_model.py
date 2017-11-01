@@ -302,9 +302,14 @@ class Seq2SeqModel(ModelBase):
           decoder_output=decoder_output, features=features, labels=labels)
       loss = None
       train_op = None
+
+    elif self.mode == "PROB":
+        predictions = None
+        train_op = None
+        loss = None
+
     else:
       losses, loss = self.compute_loss(decoder_output, features, labels)
-
       train_op = None
       if self.mode == tf.contrib.learn.ModeKeys.TRAIN:
         train_op = self._build_train_op(loss)
