@@ -304,7 +304,7 @@ class Seq2SeqModel(ModelBase):
       train_op = None
 
     elif self.mode == "PROB":
-        predictions = None
+        predictions = self._create_predictions(decoder_output, features, labels)
         train_op = None
         loss = None
 
