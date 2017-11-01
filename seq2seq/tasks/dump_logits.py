@@ -37,7 +37,7 @@ def _get_scores(predictions_dict):
   """
   prediction_len = _get_prediction_length(predictions_dict)
   source_len = predictions_dict["features.source_len"]
-  return predictions_dict["logits"][:prediction_len, :source_len]
+  return predictions_dict["logits"]
 
 
 
