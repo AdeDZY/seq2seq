@@ -19,3 +19,5 @@ from seq2seq.tasks.inference_task import InferenceTask
 from seq2seq.tasks.decode_text import DecodeText
 from seq2seq.tasks.dump_attention import DumpAttention
 from seq2seq.tasks.dump_beams import DumpBeams
+from seq2seq.tasks.prob_task import ProbTask
+from seq2seq.tasks.dump_logits import DumpLogits
